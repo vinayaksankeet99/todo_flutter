@@ -23,3 +23,22 @@ class TaskError extends TasksState {
   final String message;
   TaskError({required this.message}) : super(taskList: []);
 }
+
+class TaskUpdateLoading extends TaskLoaded {
+  final List<TaskModel> taskList;
+  const TaskUpdateLoading({required this.taskList}) : super(taskList: taskList);
+}
+
+class DeleteTaskError extends TaskLoaded {
+  final String message;
+  final List<TaskModel> taskList;
+  const DeleteTaskError({required this.message, required this.taskList})
+      : super(taskList: taskList);
+}
+
+class AddTaskError extends TaskLoaded {
+  final String message;
+  final List<TaskModel> taskList;
+  const AddTaskError({required this.message, required this.taskList})
+      : super(taskList: taskList);
+}
