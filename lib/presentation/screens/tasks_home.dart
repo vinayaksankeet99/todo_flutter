@@ -28,7 +28,7 @@ class _TasksHomePageState extends State<TasksHomePage> {
         floatingActionButton: FloatingActionButton(
           key: const Key('AddButton'),
           onPressed: () async {
-            addTaskFunction();
+            _addTaskFunction();
           },
           child: const Icon(Icons.add),
         ),
@@ -94,7 +94,7 @@ class _TasksHomePageState extends State<TasksHomePage> {
         itemBuilder: (context, index) {
           return ListTile(
               onTap: () {
-                addTaskFunction(taskModel: model[index]);
+                _addTaskFunction(taskModel: model[index]);
               },
               leading: Checkbox(
                 checkColor: Colors.white,
@@ -185,7 +185,7 @@ class _TasksHomePageState extends State<TasksHomePage> {
     ));
   }
 
-  addTaskFunction({TaskModel? taskModel}) async {
+  _addTaskFunction({TaskModel? taskModel}) async {
     final addResult = await showModalBottomSheet<TaskModel>(
         context: context,
         isScrollControlled: true,

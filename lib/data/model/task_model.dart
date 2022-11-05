@@ -33,16 +33,3 @@ class TaskModel extends Equatable {
   @override
   List<Object?> get props => [id, title, dateEpoch, done];
 }
-
-// class TaskListModel {
-//   TaskListModel({required this.list});
-
-//   factory TaskListModel.fromJson(List parsedJson) {
-//     final list = parsedJson.map((value) {
-//       return TaskModel.fromjson(value);
-//     }).toList();
-//     return TaskListModel(list: list);
-//   }
-
-//   final List<TaskModel> list;
-// }

@@ -13,7 +13,7 @@ class TaskRepository {
   Future<void> addTask({required TaskModel task}) async {
     try {
       final data = task.toJson(uid);
-      final response = await Dio()
+      await Dio()
           .post(
             _baseUrl,
             data: data,
