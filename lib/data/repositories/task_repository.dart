@@ -6,7 +6,7 @@ import 'package:dio/dio.dart';
 class TaskRepository {
   TaskRepository();
 
-  final String _baseUrl = "http://192.168.1.2:8085/tasks";
+  final String _baseUrl = "http://192.168.1.4:8085/tasks";
 
   final String uid = "1234";
 
